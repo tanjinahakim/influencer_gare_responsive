@@ -62,7 +62,7 @@ nav ul li{
 }
 .banner-title{
     font-weight: 700;
-    font-size: 52px;
+    font-size: 50px;
 }
 .banner-description{
     font-weight: 600;
@@ -74,6 +74,19 @@ nav ul li{
     width: 440px;
     height: 414px;
 }
+/*-------------shopping cart styles----- */
+.cart-section{
+    margin: 170px 165px;
+    border-top: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+    padding: 36px 60px;
+}
+.cart-container{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
 
 /* -------------Media Queries----------- */
 @media only screen and (max-width: 688px){
@@ -84,13 +97,15 @@ nav ul li{
     nav{
         font-size: 14px;
     }
-    nav ul{
-        padding-left: 30px;
+    nav > ul{
+        padding-left: 10px;
         font-size: 10px;
+        gap: 15px;
     }
     
     .banner-container{ 
-        padding-top: 80px;
+        padding-top: 0;
+        padding-bottom: 0;
         flex-flow: row wrap;
     } 
     .banner-info{
@@ -111,5 +126,23 @@ nav ul li{
         height: 100%;
         width: 100%;
     }
+    .cart-section{
+        margin: 50px auto;
+        border-top: 1px solid var(--light-gray);
+        border-bottom: 1px solid var(--light-gray);
+        padding: 20px 40px;
+    }
+    .cart-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 20px;
+        gap: 20px;
+    }
+    .cart-container img{
+        height: 20px;
+        width: 100%;
+    } 
 
 }
